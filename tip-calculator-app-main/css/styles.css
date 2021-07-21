@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #c5e4e7;
+  font-family: "Space Mono", monospace;
+  padding: 1rem;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main-flex-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 86vh;
+}
+
+.calculator-container {
+  background: white;
+  border-radius: 20px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 60vw;
+  height: 50vh;
+}
+
+.select-tip-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 2rem;
+  max-width: 29vw;
+}
+
+.select-tip-container h4 {
+  color: #5e7a7d;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.select-tip-container #bill,
+.select-tip-container #number-of-ppl {
+  font-family: "Space Mono", monospace;
+  background: #f4fafa;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 2rem;
+  text-align: right;
+  font-size: 2rem;
+  color: #00494d;
+  font-weight: bold;
+}
+
+.select-tip-container #number-of-ppl {
+  background: url(../images/icon-person.svg) no-repeat scroll 8px 8px #f4fafa;
+  background-position: 3% 50%;
+  margin-bottom: 1rem;
+}
+
+.select-tip-container #bill {
+  background: url(../images/icon-dollar.svg) no-repeat scroll 8px 8px #f4fafa;
+  background-position: 3% 50%;
+  margin-bottom: 2.5rem;
+}
+
+.select-tip-container .tip-btns {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.select-tip-container .tip-btns #custom-btn {
+  background: #f4fafa;
+  color: #00494d;
+  text-align: right;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-right: 18px;
+}
+
+.select-tip-container .tip-btns #custom-btn::-webkit-input-placeholder {
+  text-align: right;
+}
+
+.select-tip-container .tip-btns #custom-btn:-ms-input-placeholder {
+  text-align: right;
+}
+
+.select-tip-container .tip-btns #custom-btn::-ms-input-placeholder {
+  text-align: right;
+}
+
+.select-tip-container .tip-btns #custom-btn::placeholder {
+  text-align: right;
+}
+
+.select-tip-container .tip-btns .tip-btn {
+  font-family: "Space Mono", monospace;
+  font-size: 1.6rem;
+  width: 9vw;
+  height: 3.3rem;
+  border: none;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  background-color: #00494d;
+  border-radius: 5px;
+}
+
+.select-tip-container .tip-btns .tip-btn:hover {
+  cursor: pointer;
+  background-color: #26c0ab;
+}
+
+.select-tip-container .active-btn {
+  background-color: #26c0ab !important;
+}
+
+.select-tip-container .active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.select-tip-container .active::after {
+  content: "Can't be zero.";
+}
+
+.select-tip-container .red-border {
+  border: 2px solid red !important;
+}
+
+.display-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30vw;
+  background: #00494d;
+  border-radius: 20px;
+  padding: 2rem 3rem;
+}
+
+.display-container .display {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.display-container .tip-amount {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.display-container h4 {
+  color: white;
+  font-weight: 400;
+}
+
+.display-container p {
+  color: #7f9c9f;
+  font-weight: 400;
+}
+
+.display-container .amount {
+  font-size: 2.5rem;
+  color: #26c0ab;
+  font-weight: 700;
+}
+
+.display-container .btn-reset {
+  font-family: "Space Mono", monospace;
+  text-transform: uppercase;
+  color: #00494d;
+  background-color: #26c0ab;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 0;
+    margin-top: 3rem;
+  }
+  .main-flex-container {
+    height: 100%;
+  }
+  .calculator-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 1rem;
+  }
+  .select-tip-container {
+    padding: 0;
+    max-width: 90%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .select-tip-container #bill, .select-tip-container #number-of-ppl {
+    max-width: 70vw;
+  }
+  .select-tip-container .tip-btns {
+    max-width: 80vw;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  .select-tip-container .tip-btns .tip-btn {
+    max-width: 34vw;
+    width: 40vw;
+    margin-bottom: 15px;
+  }
+  .display-container {
+    max-height: 50%;
+    margin-top: 4rem;
+    max-width: 90%;
+    width: 80%;
+  }
+  .display-container .tip-amount {
+    padding: 0;
+  }
+  .display-container .btn-reset {
+    margin-top: 1rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
